@@ -6,8 +6,6 @@ const listItem=document.getElementById('listItem');
 addBtn.onclick=function(){
     const title=bookTitle.value;
     const author=bookAuthor.value;
-//console.log(title);
-//console.log(author);
 if (title && author){
     localStorage.setItem(title, author);
     location.reload();
