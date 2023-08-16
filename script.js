@@ -5,7 +5,7 @@ const listItem = document.getElementById('listItem');
 
 const books = JSON.parse(localStorage.getItem('books')) || [];
 
-addBtn.onclick = function () {
+addBtn.addEventListener('click', () => {
   const title = bookTitle.value.trim();
   const author = bookAuthor.value.trim();
 
@@ -15,7 +15,7 @@ addBtn.onclick = function () {
     localStorage.setItem('books', JSON.stringify(books));
     location.reload();
   }
-};
+});
 
 for (let i = 0; i < books.length; i++) {
   const book = books[i];
