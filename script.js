@@ -3,27 +3,40 @@ const bookAuthor=document.getElementById('bookAuthor');
 const addBtn=document.getElementById('btn');
 const listItem=document.getElementById('listItem');
 
+const books= JSON.parse(localStorage.getItem('books')) || [];
+
+
 addBtn.onclick=function(){
     const title=bookTitle.value;
     const author=bookAuthor.value;
+
+
 if (title && author){
-    localStorage.setItem(title, author);
-    location.reload();
+
+  
+  const book= {title, author};
+  books.push(book);
+  localStorage.setItem('books', JSON.stringify(books));
+  location.reload();
+
 }
 };
-for (let i = 0; i < localStorage.length; i++) {
-    const  title=localStorage.key(i);
-    const author=localStorage.getItem(title);
-    listItem.innerHTML+= `
-    ${title}: ${author}
-     <button class="remBtn" data-title="${title}">remove</button><br>`;
+
+for (let i=0;i<books.length;i++) {
+  const book = books[i];
+  listItem.innerHTML += `
+  ${book.title}:${book.author}
+  <button class="remBtn" data-index="${i}">remove</button><br>
+  `
 }
   const removeButtons=document.getElementsByClassName('remBtn');
-  
   for (let i=0; i < removeButtons.length; i++){
     removeButtons[i].addEventListener('click', function() {
-       const title = this.dataset.title;
-       localStorage.removeItem(title);
+      const index=parseInt(this.dataset.index);
+      books.splice(index, 1);
+
+       books.splice(index,1)
+       localStorage.setItem('books',JSON.stringify(books));
        location.reload();
     });
   }
