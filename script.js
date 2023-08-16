@@ -39,7 +39,7 @@ showBookList();
 const removeButtons = document.getElementsByClassName('rem-btn');
 
 const removeBook = () => {
-  Array.from(removeButtons).map((btn, i) => {
+  Array.from(removeButtons).map(btn => {
     btn.addEventListener('click', function () {
       const index = parseInt(this.dataset.index);
       books.splice(index, 1);
