@@ -4,14 +4,18 @@ const addBtn = document.getElementById('btn');
 const listItem = document.getElementById('listItem');
 
 const books = [];
+let bookObject;
 
 addBtn.onclick = () => {
   const title = bookTitle.value.trim();
   const author = bookAuthor.value.trim();
-  const bookObject = {
-    title: title,
-    author: author,
-  };
+
+  if (title.length > 0 && author.length > 0) {
+    bookObject = {
+      title: title,
+      author: author,
+    };
+  }
 
   books.push(bookObject);
 
