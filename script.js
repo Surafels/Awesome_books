@@ -23,6 +23,7 @@ addBtn.onclick = () => {
 
   bookTitle.value = '';
   bookAuthor.value = '';
+  this.location.reload();
 };
 
 for (let i = 0; i < localStorage.length; i++) {
