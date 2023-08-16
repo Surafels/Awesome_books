@@ -28,14 +28,14 @@ for (let i=0;i<books.length;i++) {
   ${book.title}:${book.author}
   <button class="remBtn" data-index="${i}">remove</button><br>
   `
+
 }
   const removeButtons=document.getElementsByClassName('remBtn');
+  
   for (let i=0; i < removeButtons.length; i++){
     removeButtons[i].addEventListener('click', function() {
       const index=parseInt(this.dataset.index);
       books.splice(index, 1);
-
-       books.splice(index,1)
        localStorage.setItem('books',JSON.stringify(books));
        location.reload();
     });
