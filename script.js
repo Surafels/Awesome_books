@@ -21,15 +21,15 @@ addBtn.addEventListener('click', () => {
   location.reload();
 });
 
-for (let i = 0; i < books.length; i++) {
-  const book = books[i];
+books.map((book, index) => {
   listEntry.innerHTML += `
     <p>${book.title}</p>
     <p>${book.author}</p>
-    <button class="remBtn" data-index="${i}">Remove</button>
+    <button class="remBtn" data-index="${index}">Remove</button>
     <hr>
   `;
-}
+});
+
 const removeButtons = document.getElementsByClassName('remBtn');
 
 for (let i = 0; i < removeButtons.length; i++) {
