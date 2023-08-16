@@ -12,6 +12,7 @@ addBtn.onclick = () => {
     title: title,
     author: author,
   };
+  books.push(bookObject);
 };
 
 for (let i = 0; i < localStorage.length; i++) {
