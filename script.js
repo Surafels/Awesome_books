@@ -40,7 +40,7 @@ const removeButtons = document.getElementsByClassName('rem-btn');
 
 const removeBook = () => {
   Array.from(removeButtons).map(btn => {
-    btn.addEventListener('click', function () {
+    btn.addEventListener('click', () => {
       const index = parseInt(this.dataset.index);
       books.splice(index, 1);
       localStorage.setItem('books', JSON.stringify(books));
