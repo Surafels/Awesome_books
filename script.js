@@ -13,8 +13,11 @@ addBtn.addEventListener('click', () => {
     const book = { title, author };
     books.push(book);
     localStorage.setItem('books', JSON.stringify(books));
-    location.reload();
+
+    title.value = '';
+    title.author = '';
   }
+  location.reload();
 });
 
 for (let i = 0; i < books.length; i++) {
