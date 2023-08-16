@@ -8,6 +8,10 @@ const books = [];
 addBtn.onclick = () => {
   const title = bookTitle.value.trim();
   const author = bookAuthor.value.trim();
+  const bookObject = {
+    title: title,
+    author: author,
+  };
 };
 
 for (let i = 0; i < localStorage.length; i++) {
