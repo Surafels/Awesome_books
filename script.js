@@ -1,5 +1,5 @@
-const bookTitle = document.getElementById('bookTitle');
-const bookAuthor = document.getElementById('bookAuthor');
+const bookTitle = document.getElementById('book-title');
+const bookAuthor = document.getElementById('book-author');
 const addBtn = document.getElementById('btn');
 const listEntry = document.getElementById('list-entry');
 
@@ -25,12 +25,12 @@ books.map((book, index) => {
   listEntry.innerHTML += `
     <p>${book.title}</p>
     <p>${book.author}</p>
-    <button class="remBtn" data-index="${index}">Remove</button>
+    <button class="rem-btn" data-index="${index}">Remove</button>
     <hr>
   `;
 });
 
-const removeButtons = document.getElementsByClassName('remBtn');
+const removeButtons = document.getElementsByClassName('rem-btn');
 
 Array.from(removeButtons).map((btn, i) => {
   btn.addEventListener('click', function () {
