@@ -32,11 +32,11 @@ books.map((book, index) => {
 
 const removeButtons = document.getElementsByClassName('remBtn');
 
-for (let i = 0; i < removeButtons.length; i++) {
-  removeButtons[i].addEventListener('click', function () {
+Array.from(removeButtons).map((btn, i) => {
+  btn.addEventListener('click', function () {
     const index = parseInt(this.dataset.index);
     books.splice(index, 1);
     localStorage.setItem('books', JSON.stringify(books));
     location.reload();
   });
-}
+});
