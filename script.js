@@ -12,8 +12,11 @@ addBtn.onclick = () => {
     title: title,
     author: author,
   };
+
   books.push(bookObject);
+
   localStorage.setItem('books', JSON.stringify(books));
+
   bookTitle.value = '';
   bookAuthor.value = '';
 };
