@@ -1,7 +1,7 @@
 const bookTitle = document.getElementById('bookTitle');
 const bookAuthor = document.getElementById('bookAuthor');
 const addBtn = document.getElementById('btn');
-const listItem = document.getElementById('listItem');
+const listEntry = document.getElementById('list-entry');
 
 const books = JSON.parse(localStorage.getItem('books')) || [];
 
@@ -17,14 +17,17 @@ addBtn.addEventListener('click', () => {
     title.value = '';
     title.author = '';
   }
+
   location.reload();
 });
 
 for (let i = 0; i < books.length; i++) {
   const book = books[i];
-  listItem.innerHTML += `
-  ${book.title}:${book.author}
-  <button class="remBtn" data-index="${i}">remove</button><br>
+  listEntry.innerHTML += `
+    <p>${book.title}</p>
+    <p>${book.author}</p>
+    <button class="remBtn" data-index="${i}">Remove</button>
+    <hr>
   `;
 }
 const removeButtons = document.getElementsByClassName('remBtn');
