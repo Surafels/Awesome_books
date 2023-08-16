@@ -9,7 +9,7 @@ addBtn.addEventListener('click', () => {
   const title = bookTitle.value.trim();
   const author = bookAuthor.value.trim();
 
-  if (title && author) {
+  if (title.length > 0 && author.length > 0) {
     const book = { title, author };
     books.push(book);
     localStorage.setItem('books', JSON.stringify(books));
