@@ -1,28 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Awesome Books</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css">
-  <title>Awesome Books</title>
-</head>
+  <body>
+    <h1>Awesome books</h1>
 
+    <div>
+      <div id="list-entry"></div>
+    </div>
 
-<body>
-  <h1>Book Collection</h1>
+    <form action="">
+      <input
+        type="text"
+        id="book-title"
+        placeholder="Title"
+        required
+      /><br /><br />
+      <input
+        type="text"
+        id="book-author"
+        placeholder="Author"
+        required
+      /><br /><br />
+      <button type="submit" id="btn">Add</button>
+    </form>
 
-  <div>
-    <div id="list-entry"></div>
-  </div>
-
-  <form action="" method="">
-    <input type="text" id="book-title" placeholder="Title">
-    <input type="text" id="book-author" placeholder="Author">
-    <button id="btn" type="submit">Add</button>
-  </form>
-
-  <script src="script.js"></script>
-</body>
-
+    <script src="script.js"></script>
+  </body>
 </html>
