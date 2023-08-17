@@ -10,6 +10,12 @@ class Book {
     this.title = title;
     this.author = author;
   }
+  set title(title) {
+    this.title = title;
+  }
+  set author(author) {
+    this.author = author;
+  }
 
   addBook() {
     const title = this.title;
@@ -30,7 +36,7 @@ class Book {
 
   removeBook(title, author) {
     books = books.filter(
-      book => book.title !== title && book.author !== author
+      (book) => book.title !== title && book.author !== author
     );
     updateStorage();
   }
@@ -60,16 +66,16 @@ const updateStorage = () => {
 // };
 
 addBtn.addEventListener('click', () => {
-  newBook = new book(bookTitle.value.trim(), bookAuthor.value.trim());
+  newBook = new Book(bookTitle.value.trim(), bookAuthor.value.trim());
   newBook.addBook();
 });
 
 listEntry.innerHTML = `${books
   .map(
-    book => `
+    (book) => `
       <li class="book-card">
         <p class="book-title">${book.title}</p>
-        <p class="book-title">${book.author}</p>
+        <p class="book-author">${book.author}</p>
         <button class="remove-btn">Remove</button>
       </li>
       <hr />`
@@ -78,13 +84,22 @@ listEntry.innerHTML = `${books
 
 const removeBtns = document.querySelectorAll('.remove-btn');
 
-// removeBtns.forEach((btn) => {
-//   btn.addEventListener('click', (e) => {
-//     const card = e.target.closest('.book-card');
-//     const title = card.querySelector('.book-title');
-//     const author = card.querySelector('.book-author');
-//     newBook.removeBook(title.innerText, author.innerText);
-//     // this.location.reload();
-//     // console.log(removeBook);
-//   });
-// });
+removeBtns.forEach((btn) => {
+  btn.addEventListener('click', (e) => {
+    const card = e.target.closest('.book-card');
+    const title = card.querySelector('.book-title');
+    const author = card.querySelector('.book-author');
+    // newBook.removeBook(title.innerText, author.innerText);
+    // console.log(author);
+
+    // this.location.reload();
+    // console.log(removeBook);
+    // bookTitle.set(title.innerText);
+    Book.title = title.innerText;
+    Book.author = author.innerText;
+    // console.log(Book.author);
+    Book.removeBook;
+  });
+});
+// Book.title = 'etyhtehd';
+// console.log(Book.title);
