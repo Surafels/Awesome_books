@@ -23,7 +23,7 @@ const updateStorage = () => {
 };
 
 const removeBook = (title, author) => {
-  books = books.filter(book => book.title !== title && book.author !== author);
+  books = books.filter((book) => book.title !== title && book.author !== author);
   updateStorage();
 };
 
@@ -31,20 +31,20 @@ addBtn.addEventListener('click', addBook);
 
 listEntry.innerHTML = `${books
   .map(
-    book => `
+    (book) => `
       <li class="book-card">
         <p class="book-title">${book.title}</p>
         <p class="book-title">${book.author}</p>
         <button class="remove-btn">Remove</button>
       </li>
-      <hr />`
+      <hr />`,
   )
   .join('')}`;
 
 const removeBtns = document.querySelectorAll('.remove-btn');
 
-removeBtns.forEach(btn => {
-  btn.addEventListener('click', e => {
+removeBtns.forEach((btn) => {
+  btn.addEventListener('click', (e) => {
     const card = e.target.closest('.book-card');
     const title = card.querySelector('.book-title');
     const author = card.querySelector('.book-author');
