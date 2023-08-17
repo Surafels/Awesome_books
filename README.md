@@ -108,6 +108,13 @@ To run the project,
 - Twitter: [@twitterhandle](https://twitter.com/filbertdan67)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/filbert-daniel-32b118143)
 
+👤 **Surafe Samson**
+
+- GitHub: [@githubhandle](https://github.com/Surafels)
+
+👤 **Denis Daniel**
+
+- GitHub: [@githubhandle](https://github.com/dd-obua)
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🔭 Future Features <a name="future-features"></a>
