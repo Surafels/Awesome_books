@@ -5,11 +5,12 @@ const listEntry = document.getElementById('list-entry');
 
 let books = JSON.parse(localStorage.getItem('books')) || [];
 
-class book {
+class Book {
   constructor(title, author) {
     this.title = title;
     this.author = author;
   }
+
   addBook() {
     const title = this.title;
     const author = this.author;
@@ -26,9 +27,10 @@ class book {
   updateStorage() {
     localStorage.setItem('books', JSON.stringify(books));
   }
+
   removeBook(title, author) {
     books = books.filter(
-      (book) => book.title !== title && book.author !== author
+      book => book.title !== title && book.author !== author
     );
     updateStorage();
   }
@@ -64,7 +66,7 @@ addBtn.addEventListener('click', () => {
 
 listEntry.innerHTML = `${books
   .map(
-    (book) => `
+    book => `
       <li class="book-card">
         <p class="book-title">${book.title}</p>
         <p class="book-title">${book.author}</p>
