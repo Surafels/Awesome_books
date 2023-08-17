@@ -70,4 +70,4 @@ class Book {
   }
 }
 
-const library = new Book();
+const newBook = new Book();
