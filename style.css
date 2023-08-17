@@ -5,12 +5,7 @@
     font-family: sans-serif;
 }
 
-h1{
-    text-align: center;
-    padding-top: 24px;
-}
-
-.books-div{
+section{
     width: 100%;
     padding: 10%;
 }
@@ -18,6 +13,7 @@ h1{
 #list-entry{
     list-style: none;
     left: 0;
+    margin-bottom: 24px;
 }
 
 .book-card{
