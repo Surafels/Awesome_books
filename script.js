@@ -31,7 +31,7 @@ class Book {
 
   removeBook(title, author) {
     this.books = this.books.filter(
-      book => book.title !== title && book.author !== author
+      (book) => book.title !== title && book.author !== author,
     );
     this.updateStorage();
     this.renderBooks();
@@ -45,7 +45,7 @@ class Book {
   renderBooks() {
     this.listEntry.innerHTML = this.books
       .map(
-        book => `
+        (book) => `
           <li class="book-card">
             <p class="entry">
               <span class="book-title">"${book.title}"</span> by
@@ -53,14 +53,14 @@ class Book {
             </p>
             <button class="remove-btn">Remove</button>
           </li>
-        `
+        `,
       )
       .join('');
 
     const removeBtns = document.querySelectorAll('.remove-btn');
 
-    removeBtns.forEach(btn => {
-      btn.addEventListener('click', e => {
+    removeBtns.forEach((btn) => {
+      btn.addEventListener('click', (e) => {
         const card = e.target.closest('.book-card');
         const title = card.querySelector('.book-title').innerText;
         const author = card.querySelector('.book-author').innerText;
