@@ -31,7 +31,7 @@ addBtn.addEventListener('click', addBook);
 
 listEntry.innerHTML = `${books
   .map(
-    (book) => `<div class="book-card">
+    (book) => `<li class="book-card">
           <p class="book-title">
             ${book.title}
           </p>
@@ -39,7 +39,7 @@ listEntry.innerHTML = `${books
            ${book.author}
           </p>
           <button class="remove-btn">Remove</button>
-        </div>
+        </li>
         <hr />`,
   )
   .join('')}`;
