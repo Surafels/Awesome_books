@@ -33,12 +33,8 @@ listEntry.innerHTML = `${books
   .map(
     book => `
       <li class="book-card">
-        <p class="book-title">
-          ${book.title}
-        </p>
-        <p class="book-title">
-          ${book.author}
-        </p>
+        <p class="book-title">${book.title}</p>
+        <p class="book-title">${book.author}</p>
         <button class="remove-btn">Remove</button>
       </li>
       <hr />`
