@@ -75,28 +75,43 @@ Clone this repository to your desired folder Enter the following commands in the
 
 Install this project with the following commmands in the terminal:
 
-```sh
-  1. npm init -y
-  2. cd my-project
-  3. npm install --save-dev stylelint@13.x stylelint-scss@3.x stylelint-config-standard@21.x stylelint-csstree-validator@1.x
-  4. npm install --save-dev hint@7.x
-  5. npm install --save-dev eslint@7.x eslint-config-airbnb-base@14.x eslint-plugin-import@2.x babel-eslint@10.x
+ ```sh
+npm init -y
+```
+` cd your-project-folder`
+
+ ```sh
+npm install --save-dev stylelint@13.x stylelint-scss@3.x stylelint-config-standard@21.x stylelint-csstree-validator@1.x
+```
+
+ ```sh
+npm install --save-dev hint@7.x
+```
+
+ ```sh
+npm install --save-dev eslint@7.x eslint-config-airbnb-base@14.x eslint-plugin-import@2.x babel-eslint@10.x
 ```
 
 ### Usage
 
 To run the project,
 
-```sh
   Open the browser and enter the adress of index.html file from your computer/server
-```
 
 ### Run tests
 
+- For HTML
 ```sh
-   1. npx hint .
-   2. npx stylelint "**/*.{css,scss}"
-   3. npx eslint .
+npx hint .
+```
+- For CSS
+```sh
+npx stylelint "**/*.{css,scss}"
+```
+
+-For JavaScript
+```sh
+npx eslint .
 ```
 
 ## 👥 Author <a name="authors"></a>
@@ -107,13 +122,16 @@ To run the project,
 - Twitter: [@twitterhandle](https://twitter.com/filbertdan67)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/filbert-daniel-32b118143)
 
-👤 **Surafe Samson**
+👤 **Surafel Samson**
 
 - GitHub: [@githubhandle](https://github.com/Surafels)
 
-👤 **Denis Daniel**
+👤 **Obua Denis Daniel**
 
-- GitHub: [@githubhandle](https://github.com/dd-obua)
+- GitHub: [dd-obua](https://github.com/dd-obua/)
+- Twitter: [@DenisDanielObu1](https://twitter.com/DenisDanielObu1)
+- LinkedIn: [denis-daniel-obua-99024a229](https://www.linkedin.com/in/denis-daniel-obua-99024a229/)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🔭 Future Features <a name="future-features"></a>
@@ -125,7 +143,8 @@ To run the project,
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-## 🤝 contributing <a name="contributing"></a>
+ 
+## 🤝 Contributing <a name="contributing"></a>
 
 You are welcome, and click <a href="https://github.com/Surafels/Awesome_books/issues">here</a> for any issues🙏
 
