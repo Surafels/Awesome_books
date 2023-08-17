@@ -3,52 +3,78 @@ const bookAuthor = document.getElementById('book-author');
 const addBtn = document.getElementById('btn');
 const listEntry = document.getElementById('list-entry');
 
-let books = JSON.parse(localStorage.getItem('books')) || [];
+const title = bookTitle.value.trim();
+const author = bookAuthor.value.trim();
 
-const addBook = () => {
-  const title = bookTitle.value.trim();
-  const author = bookAuthor.value.trim();
-  if (title.length > 0 && author.length > 0) {
-    const book = { title, author };
-    books.push(book);
-    localStorage.setItem('books', JSON.stringify(books));
+class Book {
+  books = JSON.parse(localStorage.getItem('books')) || [];
+
+  constructor(title, author) {
+    this.title = title;
+    this.author = author;
+  }
+
+  addBook() {
+    storeBook();
+    updateUI();
+  }
+
+  storeBook(title, author) {
+    if (title.length > 0 && author.length > 0) {
+      const book = { title, author };
+      books.push(book);
+      updateStorage();
+      clearInputField();
+    }
+    window.location.reload();
+  }
+
+  clearInputField() {
     title.value = '';
     title.author = '';
   }
-  this.location.reload();
-};
 
-const updateStorage = () => {
-  localStorage.setItem('books', JSON.stringify(books));
-};
+  updateUI() {
+    listEntry.innerHTML = `
+      ${books
+        .map(
+          book => `
+            <li class="book-card">
+              <p class="book-title">${book.title}</p>
+              <p class="book-title">${book.author}</p>
+              <button class="remove-btn">Remove</button>
+            </li>
+            <hr />
+          `
+        )
+        .join('')}`;
+  }
 
-const removeBook = (title, author) => {
-  books = books.filter((book) => book.title !== title && book.author !== author);
-  updateStorage();
-};
+  removeBook(title, author) {
+    books = books.filter(
+      book => book.title !== title && book.author !== author
+    );
+    updateStorage();
+    updateUI();
+  }
 
-addBtn.addEventListener('click', addBook);
+  updateStorage() {
+    localStorage.setItem('books', JSON.stringify(books));
+  }
+}
 
-listEntry.innerHTML = `${books
-  .map(
-    (book) => `
-      <li class="book-card">
-        <p class="book-title">${book.title}</p>
-        <p class="book-title">${book.author}</p>
-        <button class="remove-btn">Remove</button>
-      </li>
-      <hr />`,
-  )
-  .join('')}`;
+const book = new Book();
+
+addBtn.addEventListener('click', book.addBook);
 
 const removeBtns = document.querySelectorAll('.remove-btn');
 
-removeBtns.forEach((btn) => {
-  btn.addEventListener('click', (e) => {
+removeBtns.forEach(btn => {
+  btn.addEventListener('click', e => {
     const card = e.target.closest('.book-card');
     const title = card.querySelector('.book-title');
     const author = card.querySelector('.book-author');
-    removeBook(title.innerText, author);
+    book.removeBook(title.innerText, author);
     this.location.reload();
   });
 });
