@@ -98,7 +98,6 @@ removeBtns.forEach((btn) => {
     Book.title = title.innerText;
     Book.author = author.innerText;
     // console.log(Book.author);
-    Book.removeBook;
   });
 });
 // Book.title = 'etyhtehd';
