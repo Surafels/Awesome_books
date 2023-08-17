@@ -47,13 +47,12 @@ class Book {
       .map(
         book => `
           <li class="book-card">
-            <p>
+            <p class="entry">
               <span class="book-title">"${book.title}"</span> by
               <span class="book-author">${book.author}</span>
             </p>
             <button class="remove-btn">Remove</button>
           </li>
-          <hr />
         `
       )
       .join('');
