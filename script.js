@@ -19,7 +19,7 @@ class Book {
     if (title.length > 0 && author.length > 0) {
       const book = { title, author };
       const same = this.books.some(
-        (bk) => JSON.stringify(bk) === JSON.stringify(book),
+        (bk) => JSON.stringify(bk) === JSON.stringify(book)
       );
       if (!same) {
         this.books.push(book);
@@ -36,7 +36,7 @@ class Book {
 
   removeBook(title, author) {
     this.books = this.books.filter(
-      (book) => book.title !== title && book.author !== author,
+      (book) => book.title !== title && book.author !== author
     );
     this.updateStorage();
     this.renderBooks();
@@ -58,7 +58,7 @@ class Book {
             </p>
             <button class="remove-btn">Remove</button>
           </li>
-        `,
+        `
       )
       .join('');
 
@@ -78,3 +78,28 @@ class Book {
 const newBook = new Book();
 window.addEventListener('load', newBook.addBook);
 
+const listLink = document.querySelector('#bk-list');
+const addLink = document.querySelector('#bk-add');
+const listContact = document.querySelector('#bk-contact');
+
+const sectionList = document.querySelector('#list');
+const sectionNew = document.querySelector('#new');
+const sectionContact = document.querySelector('#contact');
+
+addLink.addEventListener('click', () => {
+  sectionNew.classList.remove('hidden');
+  sectionList.classList.add('hidden');
+  sectionContact.classList.add('hidden');
+});
+
+listContact.addEventListener('click', () => {
+  sectionContact.classList.remove('hidden');
+  sectionList.classList.add('hidden');
+  sectionNew.classList.add('hidden');
+});
+
+listLink.addEventListener('click', () => {
+  sectionList.classList.remove('hidden');
+  sectionNew.classList.add('hidden');
+  sectionContact.classList.add('hidden');
+});
