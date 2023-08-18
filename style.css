@@ -112,6 +112,9 @@ hr {
   background: #000;
 }
 .contact-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin: 12px auto;
   width: 100%;
 }
@@ -121,7 +124,7 @@ h2 {
 }
 
 .adress {
-  margin-top: 16px;
+  margin: 16px auto;
 }
 
 footer {
