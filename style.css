@@ -9,6 +9,11 @@ html {
   font-size: 62.5%;
 }
 
+body {
+  font-family: sans-serif;
+  font-size: 1.6rem;
+}
+
 .main-header {
   display: flex;
   flex-direction: row;
@@ -40,11 +45,6 @@ html {
 .nav-links li:nth-child(2) {
   border-right: 2px solid #000;
   border-left: 2px solid #000;
-}
-
-body {
-  font-family: sans-serif;
-  font-size: 2rem;
 }
 
 section {
