@@ -111,15 +111,25 @@ hr {
   margin-bottom: 2.4rem;
   background: #000;
 }
-.contact-info{
+.contact-info {
   margin: 12px auto;
   width: 100%;
-
 }
-h2{
+
+h2 {
   margin: 24px auto;
-
 }
-.adress{
+
+.adress {
   margin-top: 16px;
+}
+
+footer {
+  width: 96%;
+  border: 2px solid #000;
+  padding: 2.4rem;
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 2.4rem;
 }
