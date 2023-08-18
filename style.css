@@ -130,3 +130,8 @@ footer {
   margin: 0 auto;
   padding: 2.4rem;
 }
+
+.show-date {
+  position: absolute;
+  right: 5%;
+}
