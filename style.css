@@ -120,9 +120,18 @@ hr {
   margin: 12px auto;
   width: 100%;
 }
+
 h2 {
   margin: 24px auto;
 }
+
 .adress {
   margin-top: 16px;
+}
+
+footer {
+  width: 96%;
+  border: 2px solid #000;
+  margin: 0 auto;
+  padding: 2.4rem;
 }
