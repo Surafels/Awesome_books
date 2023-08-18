@@ -9,6 +9,39 @@ html {
   font-size: 62.5%;
 }
 
+.main-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  gap: 20%;
+  padding: 15px;
+  border: 1px solid #000;
+  margin: 10px;
+}
+
+.logo,
+.nav-links li a {
+  text-decoration: none;
+  color: #000;
+}
+
+.nav-links {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  gap: 25px;
+  justify-content: space-around;
+}
+
+.nav-links li a {
+  padding: 10px;
+}
+
+.nav-links li:nth-child(2) {
+  border-right: 2px solid #000;
+  border-left: 2px solid #000;
+}
+
 body {
   font-family: sans-serif;
   font-size: 2rem;
