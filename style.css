@@ -111,3 +111,15 @@ hr {
   margin-bottom: 2.4rem;
   background: #000;
 }
+.contact-info{
+  margin: 12px auto;
+  width: 100%;
+
+}
+h2{
+  margin: 24px auto;
+
+}
+.adress{
+  margin-top: 16px;
+}

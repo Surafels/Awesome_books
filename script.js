@@ -77,3 +77,4 @@ class Book {
 
 const newBook = new Book();
 window.addEventListener('load', newBook.addBook);
+
