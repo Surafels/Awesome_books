@@ -10,6 +10,20 @@ class Book {
     this.sectionList = document.querySelector('#list');
     this.sectionNew = document.querySelector('#new');
     this.sectionContact = document.querySelector('#contact');
+    this.showDate = document.querySelector('.show-date');
+
+    this.now = new Date();
+    this.month = this.now.toLocaleString('default', { month: 'long' });
+    this.date = this.now.getDate();
+    this.year = this.now.getFullYear();
+    this.hour24 = this.now.getHours();
+    this.hour12 = this.now.getHours() % 12 || 12;
+    this.min = this.now.getMinutes();
+    this.sec = this.now.getSeconds();
+    this.dateTime = '';
+
+    this.showDateTime();
+    this.showDate.innerText = this.dateTime;
 
     this.books = JSON.parse(localStorage.getItem('books')) || [];
 
@@ -18,7 +32,7 @@ class Book {
     this.listLink.addEventListener('click', this.displayBookList.bind(this));
     this.listContact.addEventListener(
       'click',
-      this.displayContactInfo.bind(this)
+      this.displayContactInfo.bind(this),
     );
 
     this.renderBooks();
@@ -31,7 +45,7 @@ class Book {
     if (title.length > 0 && author.length > 0) {
       const book = { title, author };
       const same = this.books.some(
-        (bk) => JSON.stringify(bk) === JSON.stringify(book)
+        (bk) => JSON.stringify(bk) === JSON.stringify(book),
       );
       if (!same) {
         this.books.push(book);
@@ -48,7 +62,7 @@ class Book {
 
   removeBook(title, author) {
     this.books = this.books.filter(
-      (book) => book.title !== title && book.author !== author
+      (book) => book.title !== title && book.author !== author,
     );
     this.updateStorage();
     this.renderBooks();
@@ -70,7 +84,7 @@ class Book {
             </p>
             <button class="remove-btn">Remove</button>
           </li>
-        `
+        `,
       )
       .join('');
 
@@ -102,6 +116,27 @@ class Book {
     this.sectionList.classList.add('hidden');
     this.sectionNew.classList.add('hidden');
     this.sectionContact.classList.remove('hidden');
+  }
+
+  nth(date) {
+    if (date > 3 && this.date < 21) return 'th';
+    switch (date % 10) {
+      case 1:
+        return 'st';
+      case 2:
+        return 'nd';
+      case 3:
+        return 'rd';
+      default:
+        return 'th';
+    }
+  }
+
+  showDateTime() {
+    this.nth();
+    this.dateTime = `${this.month} ${this.date}${this.nth(this.date)} ${
+      this.year
+    }, ${this.hour12}:${this.min}:${this.sec}${this.hour24 < 12 ? 'am' : 'pm'}`;
   }
 }
 
