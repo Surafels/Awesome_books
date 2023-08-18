@@ -4,10 +4,22 @@ class Book {
     this.bookAuthor = document.getElementById('book-author');
     this.addBtn = document.getElementById('btn');
     this.listEntry = document.getElementById('list-entry');
+    this.listLink = document.querySelector('#bk-list');
+    this.addLink = document.querySelector('#bk-add');
+    this.listContact = document.querySelector('#bk-contact');
+    this.sectionList = document.querySelector('#list');
+    this.sectionNew = document.querySelector('#new');
+    this.sectionContact = document.querySelector('#contact');
 
     this.books = JSON.parse(localStorage.getItem('books')) || [];
 
     this.addBtn.addEventListener('click', this.addBook.bind(this));
+    this.addLink.addEventListener('click', this.addToList.bind(this));
+    this.listLink.addEventListener('click', this.displayBookList.bind(this));
+    this.listContact.addEventListener(
+      'click',
+      this.displayContactInfo.bind(this)
+    );
 
     this.renderBooks();
   }
@@ -73,33 +85,25 @@ class Book {
       });
     });
   }
+
+  addToList() {
+    this.sectionNew.classList.remove('hidden');
+    this.sectionList.classList.add('hidden');
+    this.sectionContact.classList.add('hidden');
+  }
+
+  displayBookList() {
+    this.sectionList.classList.remove('hidden');
+    this.sectionNew.classList.add('hidden');
+    this.sectionContact.classList.add('hidden');
+  }
+
+  displayContactInfo() {
+    this.sectionList.classList.add('hidden');
+    this.sectionNew.classList.add('hidden');
+    this.sectionContact.classList.remove('hidden');
+  }
 }
 
 const newBook = new Book();
 window.addEventListener('load', newBook.addBook);
-
-const listLink = document.querySelector('#bk-list');
-const addLink = document.querySelector('#bk-add');
-const listContact = document.querySelector('#bk-contact');
-
-const sectionList = document.querySelector('#list');
-const sectionNew = document.querySelector('#new');
-const sectionContact = document.querySelector('#contact');
-
-addLink.addEventListener('click', () => {
-  sectionNew.classList.remove('hidden');
-  sectionList.classList.add('hidden');
-  sectionContact.classList.add('hidden');
-});
-
-listContact.addEventListener('click', () => {
-  sectionContact.classList.remove('hidden');
-  sectionList.classList.add('hidden');
-  sectionNew.classList.add('hidden');
-});
-
-listLink.addEventListener('click', () => {
-  sectionList.classList.remove('hidden');
-  sectionNew.classList.add('hidden');
-  sectionContact.classList.add('hidden');
-});
