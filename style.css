@@ -16,9 +16,14 @@ html {
   gap: 20%;
   padding: 15px;
   border: 1px solid #000;
-  margin: 10px;
+  margin: 10px 5% 10px 5%;
 }
 
+.logo {
+  letter-spacing: 0.1em;
+  font-size: 24px;
+  font-weight: 700;
+}
 .logo,
 .nav-links li a {
   text-decoration: none;
@@ -29,7 +34,7 @@ html {
   display: flex;
   flex-direction: row;
   list-style: none;
-  gap: 25px;
+  /* gap: 25px; */
   justify-content: space-around;
 }
 
@@ -111,15 +116,13 @@ hr {
   margin-bottom: 2.4rem;
   background: #000;
 }
-.contact-info{
+.contact-info {
   margin: 12px auto;
   width: 100%;
-
 }
-h2{
+h2 {
   margin: 24px auto;
-
 }
-.adress{
+.adress {
   margin-top: 16px;
 }
