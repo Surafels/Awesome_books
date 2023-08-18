@@ -116,9 +116,22 @@ hr {
   margin-bottom: 2.4rem;
   background: #000;
 }
+
 .contact-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   margin: 12px auto;
   width: 100%;
+  padding-left: 30%;
+  padding-right: 30%;
+  gap: 20px;
+}
+
+.contact-p {
+  width: 100%;
+  text-align: left;
 }
 
 h2 {
