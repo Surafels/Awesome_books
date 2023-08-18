@@ -21,6 +21,7 @@ body {
   gap: 20%;
   padding: 15px;
   border: 1px solid #000;
+  /* width: 70%; */
   margin: 10px 5% 10px 5%;
 }
 
@@ -29,9 +30,13 @@ body {
   font-size: 24px;
   font-weight: 700;
 }
-.logo,
-.nav-links li a {
+
+.logo {
   text-decoration: none;
+}
+
+.logo,
+.nav-links li {
   color: #000;
   cursor: pointer;
 }
@@ -42,9 +47,10 @@ body {
   list-style: none;
   /* gap: 25px; */
   justify-content: space-around;
+  align-items: center;
 }
 
-.nav-links li a {
+.nav-links li {
   padding: 10px;
 }
 
@@ -59,6 +65,10 @@ section {
   margin: 0 auto;
 }
 
+#new {
+  margin-top: 7%;
+  margin-bottom: 7%;
+}
 form {
   width: 40%;
   margin: 0 auto;
@@ -109,23 +119,13 @@ h1 {
   padding: 0.4rem 1.2rem;
 }
 
-hr {
-  width: 15%;
-  height: 3px;
-  display: block;
-  margin: 0 auto;
-  margin-bottom: 2.4rem;
-  background: #000;
-}
-
 .contact-info {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 12px auto;
+  margin: 5% auto 7% auto;
   width: 50%;
-  margin: 0 auto;
   width: 100%;
   padding-left: 30%;
   padding-right: 30%;
@@ -151,10 +151,10 @@ h2 {
 }
 
 footer {
-  width: 96%;
   border: 2px solid #000;
   margin: 0 auto;
   padding: 2.4rem;
+  margin: 10px 5% 10px 5%;
 }
 
 .show-date {
