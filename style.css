@@ -9,6 +9,11 @@ html {
   font-size: 62.5%;
 }
 
+body {
+  font-family: sans-serif;
+  font-size: 1.6rem;
+}
+
 .main-header {
   display: flex;
   flex-direction: row;
@@ -16,20 +21,26 @@ html {
   gap: 20%;
   padding: 15px;
   border: 1px solid #000;
-  margin: 10px;
+  margin: 10px 5% 10px 5%;
 }
 
+.logo {
+  letter-spacing: 0.1em;
+  font-size: 24px;
+  font-weight: 700;
+}
 .logo,
 .nav-links li a {
   text-decoration: none;
   color: #000;
+  cursor: pointer;
 }
 
 .nav-links {
   display: flex;
   flex-direction: row;
   list-style: none;
-  gap: 25px;
+  /* gap: 25px; */
   justify-content: space-around;
 }
 
@@ -40,11 +51,6 @@ html {
 .nav-links li:nth-child(2) {
   border-right: 2px solid #000;
   border-left: 2px solid #000;
-}
-
-body {
-  font-family: sans-serif;
-  font-size: 2rem;
 }
 
 section {
@@ -118,6 +124,8 @@ hr {
   justify-content: center;
   align-items: center;
   margin: 12px auto;
+  width: 50%;
+  margin: 0 auto;
   width: 100%;
   padding-left: 30%;
   padding-right: 30%;
@@ -131,10 +139,15 @@ hr {
 
 h2 {
   margin: 24px auto;
+  text-align: center;
 }
 
-.adress {
-  margin: 16px auto;
+.address {
+  margin-top: 16px;
+}
+
+.address li {
+  margin-left: 3.6rem;
 }
 
 footer {
@@ -142,4 +155,13 @@ footer {
   border: 2px solid #000;
   margin: 0 auto;
   padding: 2.4rem;
+}
+
+.show-date {
+  position: absolute;
+  right: 5%;
+}
+
+.hidden {
+  display: none;
 }
