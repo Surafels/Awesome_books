@@ -13,6 +13,7 @@
   - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
+  - [🚀 Live Demo](#live-demo)
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
   - [Prerequisites](#prerequisites)
@@ -49,6 +50,12 @@
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+## 🚀 Live Demo <a name="live-demo"></a>
+
+- [Live Demo Link](https://filbertkimasa.github.io/AwesomeBooks/)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 ## 💻 Getting Started <a name="getting-started"></a>
 
 ### Prerequisites
@@ -68,7 +75,7 @@ Software
 Clone this repository to your desired folder Enter the following commands in the terminal:
 
 ```sh
-  git clone https://github.com/Surafels/Awesome_books.git
+  git clone https://github.com/FilbertKimasa/AwesomeBooks.git
 ```
 
 ### Install
@@ -137,7 +144,7 @@ npx eslint .
 ## 🔭 Future Features <a name="future-features"></a>
 
 - [ ] **Add some more HTML content**
-- [ ] **Intergration with javascript**
+- [ ] **Add some more javascript**
 - [ ] **Intergration with database**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -146,7 +153,7 @@ npx eslint .
  
 ## 🤝 Contributing <a name="contributing"></a>
 
-You are welcome, and click <a href="https://github.com/Surafels/Awesome_books/issues">here</a> for any issues🙏
+You are welcome, and click <a href="#">here</a> for any issues🙏
 
 ## ⭐️ Show your support <a name="support"></a>
 
